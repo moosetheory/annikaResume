@@ -1,3 +1,248 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://resume.adhdgirl.dev/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Annika Merris'
+theme = "hugo-profile"
+
+enableRobotsTXT = true
+
+[outputs]
+home = [
+    "HTML",
+    "RSS",
+    "JSON"
+]
+page = [
+    "HTML",
+    "RSS"
+]
+
+[pagination]
+pagerSize = 3
+
+[markup]
+goldmark.renderer.unsafe = true
+
+[params]
+title = "Annika Merris' Resume"
+description = "My resume site"
+useBootstrapCDN = true
+mathjax = false
+animate = true
+
+
+[params.font]
+fontSize = "1rem"
+fontWeight = 400
+lineHeight = 1.5
+textAlign = "left"
+
+
+[params.navbar]
+disableSearch = true
+[params.navbar.stickyNavBar]
+enable = true
+showOnScrollUp = true
+
+
+[params.hero]
+enable = true
+intro = "Hi, my name is"
+title = "Annika."
+subtitle = "I'm a software engineer and nerd."
+content = """
+I've spent over a decade working as a software engineer in a variety of fields,
+from a quick service restaurant data management provider to Fortune 500
+companies. I've been experimenting with a homelab I have built at home to begin
+learning how to use technologies that I have not yet used professionally.
+"""
+[params.hero.button]
+enable = true
+name = "Resume"
+url = "#"
+download = true
+newPage = false
+[params.hero.socialLinks]
+[[params.hero.socialLinks.fontAwesomeIcons]]
+icon = "fab fa-github"
+url = "https://github.com/moosetheory"
+
+
+[params.about]
+enable = true
+title = "About Me"
+content = """
+I'm a senior software engineer. I started my career working for a small company
+while now I work for a company with tens of thousands of employees.
+"""
+[params.about.skills]
+enable = true
+title = "Some of the technology I've worked with!"
+items = [
+    "HTML/CSS",
+    "C#",
+    "Java",
+    "Spring Boot",
+    "Vue",
+    "AWS",
+    "Kafka",
+    "Ansible",
+    "Proxmox",
+    "Github/forgejo Actions"
+]
+
+
+[params.experience]
+enable = true
+
+[[params.experience.items]]
+job = "Senior Apps Developer"
+company = "Progressive"
+companyUrl = "https://www.progressive.com/"
+date = "Feb 2022 to Present"
+featuredLink.enable = false
+content = """
+I am currently a senior software developer at Progressive. I work remotely, with
+a team spread from Florida to Ohio to Colorado. I am our auth server's TAO
+(Technical Application Owner), having written the bulk of the current code base
+and providing support to other teams who need to add authentication to their
+services.
+
+- Developed reliable and maintainable code using C#, VisualBasic, and TypeScript
+- Rebuilt authentication server using Duende's Identity Server
+- Updated website to use modern REST APIs with a Vue frontend
+- Performed exploration and diagnosis of bugs in order to improve stability of
+the product
+"""
+
+[[params.experience.items]]
+job = "Lead Software Developer"
+company = "Rural Sourcing Inc"
+companyUrl = "https://www.teamsparq.com/"
+date = "Oct 2021 to Feb 2022"
+featuredLink.enable = false
+content = """
+RSI is a consulting firm providing their services to a variety of companies.
+Nearly every employee had switch to operating remotely, allowing even small
+teams to have employees working across multiple time zones.
+
+- Lead a small team getting off the ground on a project with a large enterprise
+client
+- Implemented easy to read and efficient code to meet requirements provided by
+client
+- Worked with leadership to find a project manager to fit my team's needs
+
+This firm was purchased by a company called Spark after I left.
+"""
+
+[[params.experience.items]]
+job = "Senior Software Engineer"
+company = "LinQuest Corporation"
+companyUrl = "https://linquest.com/"
+date = "Oct 2019 to Oct 2021"
+featuredLink.enable = false
+content = """
+Perduco was a smallish contracting firm working to create tools to help with
+research projects.
+
+- Worked with a small team to design tooling to assist with research projects
+- Built APIs in Java to link dispirate information storage tools
+- Provided guidance to data analysts and junior developers to help accelerate
+their growth
+- Built and maintained a small kubernetes cluster running our development
+environment
+
+I was originally hired by The Perduco Group. Within days of starting, we were
+purchased by LinQuest Corporation, which my former coworkers inform me has
+been purchased by KBR.
+"""
+
+[[params.experience.items]]
+job = "Senior Software Engineer"
+company = "J P Morgan Chase"
+companyUrl = "https://chase.com/"
+date = "Dec 2015 to Sept 2019"
+featuredLink.enable = false
+content = """
+I worked in the ATM group at Chase. While here I worked at a high level adding
+new functionality to our ATMs and updating exting functionality. I worked at a
+low level helping determine if our existing hardware supported a feature that
+the manufacturer did not believe it could do.
+
+- Researched technology to facilitate rapid, modern, and stable updates to our
+user interface
+- Determined a mechanism by which existing equipment could be used to support a
+new feature
+- Assisted another team by creating tooling to automate regular maintenance
+tasks
+"""
+
+[[params.experience.items]]
+job = "Software Engineer II"
+company = "Vivonet"
+companyUrl = "https://infor.com/"
+date = "July 2011 to Dec 2015"
+featuredLink.enable = false
+content = """
+Syrus provided above the store level data aggregation and analytics, ingesting
+data from a variety of point of sale systems and using that to provide ordering,
+scheduling, and other store management assistance. Syrus was a relatively small
+company, with under 50 employees when I started. While here, I performed many
+roles in addition to software development.
+
+- Maintained and moderenized our server infrastructure
+- Provided desktop IT support
+- Created tools to extract and normalize data from point of sales for our
+reporting tools
+- Built and maintained CI/CD pipelines
+
+I was originally hired by Syrus Restaurant Information Services, which was
+purchased by Vivonet while I was there. After I departed it was purchased by
+Infor.
+"""
+
+
+[params.education]
+enable = true
+index = true
+[[params.education.items]]
+title = "Bachelor of Science in Computer Science"
+school.name = "Wright State University"
+school.url = "https://www.wright.edu/"
+date = "Fall 2006 to June 2011"
+
+
+[params.achievements]
+enable = false
+
+
+[params.projects]
+enable = false
+
+
+[params.contact]
+enable = true
+content = """
+Reach out to me if you have a question or just want to chat me up. I'll do my
+best to respond!
+"""
+
+[params.contact.formspree]
+enable = true
+formId = "mblowwrq"
+emailCaption = "Enter your email address"
+messageCaption = "What do you want to say to me?"
+messageRows = 5
+
+
+[params.footer]
+[params.footer.recentPosts]
+enable = false
+
+[params.footer.socialNetworks]
+github = "https://github.com/moosetheory/"
+
+
+[params.datesFormat]
+article = "02 Jananuary 2006"
+articleList = "02 Jan 2006"
+articleRecent = "02 Jan 2006"
